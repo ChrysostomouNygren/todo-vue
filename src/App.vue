@@ -47,7 +47,7 @@ function removeTask(todo) {
       </div>
       <ul>
         <li v-for="todo in todos" :key="todo.id">
-          <input type="checkbox" v-model="todo.done" />
+          <input class="checkeliboxeli" type="checkbox" v-model="todo.done" />
           <span :class="{ done: todo.done }">{{ todo.text }}</span>
           <button @click="removeTask(todo)">🗑️</button>
         </li>
@@ -82,6 +82,11 @@ button {
 .done {
   color: rgba(0, 0, 0, 0.445);
 }
+.checkeliboxeli {
+  accent-color: black;
+}
+
+
 
 /* ************************************** */
 /* Padding & avstånd css */
